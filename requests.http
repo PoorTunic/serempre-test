@@ -1,0 +1,54 @@
+### Crear nuevo usuario
+POST http://localhost:5001/serempre-test-315620/us-central1/app/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Test Data",
+    "email" : "test2@data.com",
+    "password" : "HelloWorld123"
+}
+
+### Obtener datos usuarios
+GET http://localhost:5001/serempre-test-315620/us-central1/app/api/users HTTP/1.1
+
+### Obtener datos usuario por ID
+GET http://localhost:5001/serempre-test-315620/us-central1/app/api/users/:id HTTP/1.1
+
+### Actualizar datos usuario
+PUT http://localhost:5001/serempre-test-315620/us-central1/app/api/users/:id HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "Daniel C A",
+    "email" : "new-email@domain.com",
+    "password" : "NewMD5Pwd"
+}
+
+### Eliminar Usuario
+DELETE http://localhost:5001/serempre-test-315620/us-central1/app/api/users/:id HTTP/1.1
+
+### Agregar puntos a un usuario
+POST http://localhost:5001/serempre-test-315620/us-central1/app/api/points HTTP/1.1
+Content-Type: application/json
+
+{
+    "quantity" : 50,
+    "reason" : "Evaluación HTTP",
+    "user" : ":id_user"
+}
+
+### Obtener entradas de puntos por usuario
+GET http://localhost:5001/serempre-test-315620/us-central1/app/api/points/:id_user HTTP/1.1
+
+### Actualizar entrada de puntos
+PUT http://localhost:5001/serempre-test-315620/us-central1/app/api/points/:id HTTP/1.1
+Content-Type: application/json
+
+{
+    "quantity" : 50,
+    "reason" : "Evaluación HTTP",
+    "user" : ":id_user"
+}
+
+### Eliminar entrada de puntos
+DELETE http://localhost:5001/serempre-test-315620/us-central1/app/api/points/:id HTTP/1.1
